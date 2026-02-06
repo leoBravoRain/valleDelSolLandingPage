@@ -24,3 +24,19 @@ export interface SocialLink {
   href: string;
   icon: string;
 }
+
+export interface Cabin {
+  id: string;
+  title: string;
+  description: string;
+  images: string[];
+  details: string;
+  amenities: CarouselItem[];
+  reserveButtonId: string;
+}
+
+export interface Amenity {
+  imageUrl: string;
+  alt: string;
+  caption: string;
+}
