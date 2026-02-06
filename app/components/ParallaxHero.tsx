@@ -3,10 +3,10 @@
 import Image from 'next/image';
 
 interface ParallaxHeroProps {
-  backgroundImage: string;
-  title: string;
-  subtitle: string;
-  description: string;
+  readonly backgroundImage: string;
+  readonly title: string;
+  readonly subtitle: string;
+  readonly description: string;
 }
 
 export default function ParallaxHero({

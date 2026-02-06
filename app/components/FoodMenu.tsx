@@ -1,8 +1,8 @@
 import { MenuItem } from './types';
 
 interface FoodMenuProps {
-  items: MenuItem[];
-  className?: string;
+  readonly items: MenuItem[];
+  readonly className?: string;
 }
 
 export default function FoodMenu({ items, className = '' }: FoodMenuProps) {
@@ -10,9 +10,9 @@ export default function FoodMenu({ items, className = '' }: FoodMenuProps) {
     <div className={`food-menu-container ${className}`}>
       <div className="food-menu-content-wrapper">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {items.map((item, index) => (
+          {items.map((item) => (
             <div
-              key={index}
+              key={`${item.title}-${item.price}`}
               className={`food-menu-item ${
                 item.highlightLabel ? 'food-menu-highlight' : ''
               }`}
