@@ -40,3 +40,10 @@ export interface Amenity {
   alt: string;
   caption: string;
 }
+
+export interface MenuItem {
+  title: string;
+  description: string;
+  price: string;
+  highlightLabel?: string;
+}
