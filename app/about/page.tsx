@@ -13,7 +13,7 @@ const navigationItems: NavigationItem[] = [
     label: 'Eventos',
     href: '/events',
     children: [
-      { label: 'Matrimonios', href: '/events/matrimonios' },
+      { label: 'Matrimonios', href: '/events/weddings' },
       { label: 'Eventos Corporativos', href: '/events/corporativos' },
       { label: 'Paseos de Cursos', href: '/events/paseos' },
     ],
