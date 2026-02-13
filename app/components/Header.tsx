@@ -5,17 +5,32 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { NavigationItem } from './types';
 
+// Navigation items - centralized in Header component
+const navigationItems: NavigationItem[] = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Cabañas', href: '/cabanas' },
+  { label: 'Restaurante', href: '/restaurant' },
+  {
+    label: 'Eventos',
+    href: '/events',
+    children: [
+      { label: 'Matrimonios', href: '/events/weddings' },
+      { label: 'Eventos Corporativos', href: '/events/corporateEvents' },
+      { label: 'Paseos de Cursos', href: '/events/classOutings' },
+    ],
+  },
+  { label: 'Nosotros', href: '/about' },
+];
+
 interface HeaderProps {
   logoUrl?: string;
   logoAlt?: string;
-  navigationItems: NavigationItem[];
   reservasButtonId?: string;
 }
 
 export default function Header({
   logoUrl = 'https://i0.wp.com/valledelsolquillon.cl/wp-content/uploads/2024/08/Blanco-e1723074296739.png',
   logoAlt = 'Valle del Sol Logo',
-  navigationItems,
   reservasButtonId = 'btn-widgte1',
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

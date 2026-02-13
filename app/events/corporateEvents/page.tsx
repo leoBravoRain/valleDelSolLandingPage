@@ -4,23 +4,7 @@ import HeroSection from '../../components/HeroSection';
 import HorizontalGallery from '../../components/HorizontalGallery';
 import TwoColumnSection from '../../components/TwoColumnSection';
 import EventFeatureCard from '../../components/EventFeatureCard';
-import { NavigationItem, SocialLink } from '../../components/types';
-
-const navigationItems: NavigationItem[] = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Cabañas', href: '/cabanas' },
-  { label: 'Restaurante', href: '/restaurant' },
-  {
-    label: 'Eventos',
-    href: '/events',
-    children: [
-      { label: 'Matrimonios', href: '/events/weddings' },
-      { label: 'Eventos Corporativos', href: '/events/corporateEvents' },
-      { label: 'Paseos de Cursos', href: '/events/classOutings' },
-    ],
-  },
-  { label: 'Nosotros', href: '/about' },
-];
+import { SocialLink } from '../../components/types';
 
 const socialLinks: SocialLink[] = [
   {
@@ -150,7 +134,7 @@ const experiences = [
 export default function CorporateEventPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header navigationItems={navigationItems} />
+      <Header />
 
       <main className="grow pt-24">
         {/* Hero with background image */}

@@ -4,23 +4,7 @@ import HeroSection from '../../components/HeroSection';
 import HorizontalGallery from '../../components/HorizontalGallery';
 import TwoColumnSection from '../../components/TwoColumnSection';
 import AmenitiesCarousel from '../../components/AmenitiesCarousel';
-import { NavigationItem, SocialLink, Amenity } from '../../components/types';
-
-const navigationItems: NavigationItem[] = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Cabañas', href: '/cabanas' },
-  { label: 'Restaurante', href: '/restaurant' },
-  {
-    label: 'Eventos',
-    href: '/events',
-    children: [
-      { label: 'Matrimonios', href: '/events/weddings' },
-      { label: 'Eventos Corporativos', href: '/events/corporateEvents' },
-      { label: 'Paseos de Cursos', href: '/events/classOutings' },
-    ],
-  },
-  { label: 'Nosotros', href: '/about' },
-];
+import { SocialLink, Amenity } from '../../components/types';
 
 const socialLinks: SocialLink[] = [
   {
@@ -102,7 +86,7 @@ const secondGalleryImages: string[] = [
 export default function ClassOutingsPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header navigationItems={navigationItems} />
+      <Header />
 
       <main className="grow pt-24">
         {/* Hero: Paseos de Curso + amenities carousel */}

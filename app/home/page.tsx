@@ -6,24 +6,9 @@ import LocationSection from '../components/LocationSection';
 import ParallaxCTA from '../components/ParallaxCTA';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
-import { NavigationItem, CarouselItem, FeatureBlock, SocialLink } from '../components/types';
+import { CarouselItem, FeatureBlock, SocialLink } from '../components/types';
 
 // Data configuration
-const navigationItems: NavigationItem[] = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Cabañas', href: '/cabanas' },
-  { label: 'Restaurante', href: '/restaurant' },
-  {
-    label: 'Eventos',
-    href: '/events',
-    children: [
-      { label: 'Matrimonios', href: '/events/matrimonios' },
-      { label: 'Eventos Corporativos', href: '/events/corporativos' },
-      { label: 'Paseos de Cursos', href: '/events/paseos' },
-    ],
-  },
-  { label: 'Nosotros', href: '/about' },
-];
 
 const carouselItems: CarouselItem[] = [
   {
@@ -130,7 +115,7 @@ const socialLinks: SocialLink[] = [
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Header navigationItems={navigationItems} />
+      <Header />
       
       <main className="pt-24">
         {/* Hero Section */}

@@ -4,24 +4,7 @@ import PageHeader from '../components/PageHeader';
 import HeroSection from '../components/HeroSection';
 import TwoColumnSection from '../components/TwoColumnSection';
 import CabinCard from '../components/CabinCard';
-import { NavigationItem, Cabin, SocialLink } from '../components/types';
-
-// Navigation items (reused from home)
-const navigationItems: NavigationItem[] = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Cabañas', href: '/cabanas' },
-  { label: 'Restaurante', href: '/restaurant' },
-  {
-    label: 'Eventos',
-    href: '/events',
-    children: [
-      { label: 'Matrimonios', href: '/events/matrimonios' },
-      { label: 'Eventos Corporativos', href: '/events/corporativos' },
-      { label: 'Paseos de Cursos', href: '/events/paseos' },
-    ],
-  },
-  { label: 'Nosotros', href: '/about' },
-];
+import { Cabin, SocialLink } from '../components/types';
 
 // Social links (reused from home)
 const socialLinks: SocialLink[] = [
@@ -317,7 +300,7 @@ const cabins: Cabin[] = [
 export default function Cabanas() {
   return (
     <div className="min-h-screen">
-      <Header navigationItems={navigationItems} />
+      <Header />
 
       <main className="pt-24">
         {/* Page Header */}

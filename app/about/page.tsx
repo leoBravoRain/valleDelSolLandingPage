@@ -3,23 +3,7 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import HorizontalGallery from '../components/HorizontalGallery';
 import TeamMemberCard from '../components/TeamMemberCard';
-import { NavigationItem, SocialLink } from '../components/types';
-
-const navigationItems: NavigationItem[] = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Cabañas', href: '/cabanas' },
-  { label: 'Restaurante', href: '/restaurant' },
-  {
-    label: 'Eventos',
-    href: '/events',
-    children: [
-      { label: 'Matrimonios', href: '/events/weddings' },
-      { label: 'Eventos Corporativos', href: '/events/corporativos' },
-      { label: 'Paseos de Cursos', href: '/events/paseos' },
-    ],
-  },
-  { label: 'Nosotros', href: '/about' },
-];
+import { SocialLink } from '../components/types';
 
 const socialLinks: SocialLink[] = [
   {
@@ -60,7 +44,7 @@ const aboutGalleryImages: string[] = [
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header navigationItems={navigationItems} />
+      <Header />
 
       <main className="grow pt-24">
         {/* Hero / Headline with animated words */}

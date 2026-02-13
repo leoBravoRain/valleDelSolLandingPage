@@ -6,23 +6,7 @@ import TwoColumnSection from '../components/TwoColumnSection';
 import FoodMenu from '../components/FoodMenu';
 import Image from 'next/image';
 import Link from 'next/link';
-import { NavigationItem, SocialLink, MenuItem } from '../components/types';
-
-const navigationItems: NavigationItem[] = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Cabañas', href: '/cabanas' },
-  { label: 'Restaurante', href: '/restaurant' },
-  {
-    label: 'Eventos',
-    href: '/events',
-    children: [
-      { label: 'Matrimonios', href: '/events/matrimonios' },
-      { label: 'Eventos Corporativos', href: '/events/corporativos' },
-      { label: 'Paseos de Cursos', href: '/events/paseos' },
-    ],
-  },
-  { label: 'Nosotros', href: '/about' },
-];
+import { SocialLink, MenuItem } from '../components/types';
 
 const socialLinks: SocialLink[] = [
   {
@@ -125,7 +109,7 @@ const wineMenuItems: MenuItem[] = [
 export default function RestaurantPage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <Header navigationItems={navigationItems} />
+      <Header />
       <main className="grow pt-24">
         {/* Hero Section with Parallax */}
         <ParallaxHero
